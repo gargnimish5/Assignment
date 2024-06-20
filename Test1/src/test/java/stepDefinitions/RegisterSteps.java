@@ -59,14 +59,14 @@ public class RegisterSteps {
     public void i_navigate_to_the_sign_in_page() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://magento.softwaretestingboard.com/");
+        driver.get(config.getProperty("url"));
         signInPage = new SignInPage(driver);
     }
 
     @When("I enter valid credentials")
     public void i_enter_valid_credentials() {
-        signInPage.enterEmail("john.doe@example.com");
-        signInPage.enterPassword("Test@123");
+        signInPage.enterEmail(config.getProperty("email"));
+        signInPage.enterPassword(config.getProperty("password"));
     }
 
     @And("I submit the sign-in form")
