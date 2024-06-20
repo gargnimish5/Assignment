@@ -52,6 +52,7 @@ public class RegisterSteps {
         String expectedMessage = config.getProperty("signUpMessage");
         String actualMessage = loginHomePage.getRegistrationSuccessMessage();
         assertEquals(expectedMessage, actualMessage);
+        loginHomePage.loginOut();
         driver.quit();
     }
 
