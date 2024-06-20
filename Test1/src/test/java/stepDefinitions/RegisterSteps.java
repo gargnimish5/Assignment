@@ -60,7 +60,7 @@ public class RegisterSteps {
     public void i_navigate_to_the_sign_in_page() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get(config.getProperty("url"));
+        driver.get(config.getProperty("signInUrl"));
         signInPage = new SignInPage(driver);
     }
 

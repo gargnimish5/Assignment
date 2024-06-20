@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class SignInPage extends BasePage {
     private By emailInput = By.id("email");
     private By passwordInput = By.id("pass");
-    private By signInButton = By.cssSelector("button[title='Sign In']");
+    private By signInButton = By.cssSelector("button[class='action action-login secondary']");
 
     public SignInPage(WebDriver driver) {
         super(driver);
